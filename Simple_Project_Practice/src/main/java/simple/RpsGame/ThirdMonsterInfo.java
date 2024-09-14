@@ -1,16 +1,18 @@
 package simple.RpsGame;
 
-public class Monstet1 {
+public class ThirdMonsterInfo {
 
-    private String name = "고라파덕";
-    private int hp = 10;
+    private String name;
+    private int hp;
 
-    public Monstet1() {
+    public ThirdMonsterInfo() {
+        this.name = "피카츄"; // 기본값
+        this.hp = 10; // 기본 HP
     }
 
-    public Monstet1(String name, int hp) {
+    public ThirdMonsterInfo(String name, int hp) {
         this.name = name;
-        this.hp = hp;
+        this.hp = Math.max(hp, 0); // HP는 0 이상
     }
 
     public String getName() {
@@ -26,7 +28,7 @@ public class Monstet1 {
     }
 
     public void setHp(int hp) {
-        this.hp = hp;
+        this.hp = Math.max(hp, 0); // HP는 0 이상
     }
 
     @Override
