@@ -25,7 +25,7 @@ public class Lose {
                 break;
             case 0:
                 System.out.println("프로그램을 종료합니다...");
-                return; // 프로그램 종료
+                System.exit(0); // 프로그램 종료
             default:
                 System.out.println("잘못된 번호를 입력하셨습니다. 다시 시도하세요.");
                 lose(); // 잘못된 입력 시 다시 메소드 호출

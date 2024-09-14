@@ -1,16 +1,14 @@
 package simple.RpsGame;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Win {
 
     Scanner sc = new Scanner(System.in);
-    List<String> sm = new ArrayList<>();
     FirstMonsterInfo first = new FirstMonsterInfo();
     SecondMonsterInfo second = new SecondMonsterInfo();
     ThirdMonsterInfo third = new ThirdMonsterInfo();
+    SaveMonsters save = new SaveMonsters();
     Attack at = new Attack();
 
     public void firstWin() {
@@ -19,7 +17,7 @@ public class Win {
         int no = sc.nextInt();
 
         if (no == 1) {
-            sm.add(first.getName());
+            save.addMonsters(first.getName());
             System.out.println(first.getName() + " 포획완료!!!");
         } else if (no == 2) {
             System.out.println(first.getName() + "이 도망갔습니다");
@@ -36,7 +34,7 @@ public class Win {
         int no = sc.nextInt();
 
         if (no == 1) {
-            sm.add(second.getName());
+            save.addMonsters(second.getName());
             System.out.println(second.getName() + " 포획완료!!!");
         } else if (no == 2) {
             System.out.println(second.getName() + "이 도망갔습니다");
@@ -54,7 +52,7 @@ public class Win {
         int no = sc.nextInt();
 
         if (no == 1) {
-            sm.add(third.getName());
+            save.addMonsters(third.getName());
             System.out.println(third.getName() + " 포획완료!!!");
         } else if (no == 2) {
             System.out.println(third.getName() + "이 도망갔습니다");
@@ -93,16 +91,13 @@ public class Win {
     }
 
     public void SaveMonsters() {
-        if (sm.isEmpty()) {
-            System.out.println("현재 포획한 몬스터가 없습니다...먼저 몬스터와 대결 후 승리하여 추가해주세요");
+        if (save.isEmpty()) {
+            System.out.println("현재 저장된 몬스터가 없습니다. 먼저 몬스터와 대결해주세요..!!");
             at.attack();
         } else {
-            System.out.println("===========현재 포획된 몬스터들===========");
-            for (String saveMonsters : sm) {
-                System.out.println(saveMonsters);
-
-            }
-            System.out.println("======================================");
+            System.out.println("===========몬스터 도감============");
+            System.out.println(save.getSave());
+            System.out.println("================================");
         }
     }
 

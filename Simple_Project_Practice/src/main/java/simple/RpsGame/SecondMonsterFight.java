@@ -13,16 +13,16 @@ public class SecondMonsterFight {
         int playerHP = 10;
 
         while (playerHP > 0 && monster1.getHp() > 0) {
-            System.out.println("============야생의 " + monster1.getName() + "=============");
+            System.out.println("===============야생의 " + monster1.getName() + "===============");
             System.out.println(monster1.getName() + " 가위바위보 대결 ");
-            System.out.println("=====================================");
+            System.out.println("===========================================");
 
-            System.out.println("======플레이어 및 몬스터의 HP 정보=======");
+            System.out.println("=========플레이어 및 몬스터의 HP 정보==========");
             System.out.println("현재 " + monster1.getName() + " HP : " + monster1.getHp());
             System.out.println("현재 플레이어 HP : " + playerHP);
-            System.out.println("======================================");
+            System.out.println("===========================================");
 
-            System.out.println("===========플레이어 공격 선택============");
+            System.out.println("=============플레이어 공격 선택===============");
             System.out.println("★선택한 숫자만큼 데미지가 들어갑니다★");
             System.out.print("가위(1), 바위(2), 보(3) 중 한 가지 (숫자)선택 : ");
             int playerAttack = sc.nextInt();
@@ -34,16 +34,16 @@ public class SecondMonsterFight {
             }
 
             System.out.println("플레이어 공격 : " + (playerAttack == 1 ? "가위(1)" : playerAttack == 2 ? "바위(2)" : "보(3)"));
-            System.out.println("======================================");
+            System.out.println("===========================================");
 
             // 몬스터의 랜덤 공격
             int monsterRandomAttackDamage = (int) (Math.random() * 3) + 1;
-            System.out.println("============몬스터 공격 정보=============");
+            System.out.println("==============몬스터 공격 정보================");
             System.out.println(monster1.getName() + " 공격 : " + (monsterRandomAttackDamage == 1 ? "가위(1)" : monsterRandomAttackDamage == 2 ? "바위(2)" : "보(3)"));
-            System.out.println("======================================");
+            System.out.println("===========================================");
 
             // 승패 결정
-            System.out.println("==========플레이어 vs " + monster1.getName() + "===========");
+            System.out.println("=============플레이어 vs " + monster1.getName() + "===============");
             if (playerAttack == monsterRandomAttackDamage) {
                 System.out.println("비겼습니다...");
             } else if (playerAttack == 1 && monsterRandomAttackDamage == 2) {
@@ -72,7 +72,7 @@ public class SecondMonsterFight {
                 monster1.setHp(monster1.getHp() - 3);
             }
 
-            System.out.println("======================================");
+            System.out.println("===========================================");
 
             // 게임 종료 조건 체크
             if (monster1.getHp() <= 0) {
