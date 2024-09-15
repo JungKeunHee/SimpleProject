@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Attack {
 
+    // 대결 상대 선택할 수 있는 메소드
     public void attack() {
         Scanner sc = new Scanner(System.in);
 
@@ -13,21 +14,21 @@ public class Attack {
         System.out.print("사냥할 몬스터 번호를 입력하세요 : ");
         int no = sc.nextInt();
 
-        FirstMonsterFight first = new FirstMonsterFight();
-        SecondMonsterFight second = new SecondMonsterFight();
-        ThirdMonsterFight third = new ThirdMonsterFight();
+        Fight fight = new Fight();
 
+        // 선택한 번호에 따라 대결상대와 대결할 수 있도록 설계
         switch (no) {
             case 1:
-                first.firstMonsterFight();
+                fight.firstMonsterFight(); // 첫 번째 몬스터와 대결
                 break;
             case 2:
-                second.secondMonsterFight();
+                fight.secondMonsterFight(); // 두 번째 몬스터와 대결
                 break;
             case 3:
-                third.ThirdMonsterFight();
+                fight.ThirdMonsterFight(); // 세 번째 몬스터와 대결
                 break;
             default:
+                // 다른 번호 입력 시 다시 선택할 수 있도록 구문 출력
                 System.out.println("메뉴에 맞는 번호를 입력해주세요...");
                 break;
         }

@@ -26,9 +26,11 @@ public class Application {
             // switch 문을 사용하여 사용자가 입력받은 정수값 기준으로 case 실행
             switch (no) {
                 case 1:
+                    // 대결상대 선택
                     at.attack();
                     break;
                 case 2:
+                    // 몬스터 도감 확인
                     win.SaveMonsters();
                     break;
                 case 0:

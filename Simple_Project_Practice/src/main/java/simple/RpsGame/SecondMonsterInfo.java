@@ -6,31 +6,22 @@ public class SecondMonsterInfo {
     private int hp;
 
     public SecondMonsterInfo() {
-        this.name = "잠만보"; // 기본값
+        this.name = "잠만보"; // 두 번째 몬스터 이름 설정
         this.hp = 10; // 기본 HP
     }
 
     public int getHp() {
+
         return hp;
     }
 
     public void setHp(int hp) {
-        this.hp = Math.max(hp, 0); // HP는 0 이상으로 설정
+
+        this.hp = hp;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "SecondMonsterInfo{" +
-                "name='" + name + '\'' +
-                ", hp=" + hp +
-                '}';
-    }
 }
