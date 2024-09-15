@@ -38,7 +38,7 @@ public class Application {
                     return; // 프로그램 종료
                 default:
                     System.out.println("잘못된 번호를 입력하셨습니다. 메뉴에 맞는 번호를 입력해주세요...");
-                    break; // 루프 계속
+                    break; // 잘못된 번호 입력 시 메뉴에 맞는 번호 선택할 수 있도록 메세지 호출
             }
         }
     }
