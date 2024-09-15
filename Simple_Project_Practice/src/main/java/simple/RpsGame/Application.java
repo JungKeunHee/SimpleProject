@@ -14,15 +14,18 @@ public class Application {
         Attack at = new Attack();
         Win win = new Win();
 
-        System.out.println("==========몬스터 가위바위보 게임==========");
+        // 한 줄 띄기
+        System.out.println();
 
         // while(true) 를 통해 무한루프 설정
         while (true) {
-            System.out.println("[메뉴 1번] : 사냥하러 가기");
-            System.out.println("[메뉴 2번] : 현재까지 잡은 몬스터 목록(도감)");
-            System.out.println("[메뉴 0번] : 프로그램 종료");
+            System.out.println("★★★★★★★★몬스터 가위바위보 게임★★★★★★★★");
+            System.out.println("★ [메뉴 1번] : 사냥하러 가기               ★");
+            System.out.println("★ [메뉴 2번] : 몬스터 도감 확인하기         ★");
+            System.out.println("★ [메뉴 0번] : 프로그램 종료               ★");
+            System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★★★★★");
             System.out.print("[메뉴 번호를 선택해주세요] : ");
-            int no = sc.nextInt();; // 메뉴 번호를 매 루프마다 입력받기
+            int no = sc.nextInt(); // 메뉴 번호를 매 루프마다 입력받기
 
             // switch 문을 사용하여 사용자가 입력받은 정수값 기준으로 case 실행
             switch (no) {

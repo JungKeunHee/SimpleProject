@@ -13,13 +13,13 @@ public class Win {
 
     // 플레이어가 첫 번째 몬스터한테 승리 시 호출
     public void firstWin() {
-        System.out.println("[플레이어가 승리하였습니다!!]");
+        System.out.println("★★★★★플레이어가 승리하였습니다!!★★★★★★");
         System.out.print("[몬스터를 잡으시겠습니까? yes(1) or no(2) 선택] : ");
         int no = sc.nextInt();
 
         if (no == 1) {
             save.addMonsters(first.getName()); // 저장 선택 시 SaveMonsters 클래스에 저장
-            System.out.println(first.getName() + " 포획완료!!!");
+            System.out.println("[몬스터 이름 : " + first.getName() + "]" + " ▶몬스터(도감) 추가완료◀");
         } else if (no == 2) {
             System.out.println(first.getName() + "이 도망갔습니다");
         } else {
@@ -31,17 +31,17 @@ public class Win {
 
     // 플레이어가 두 번째 몬스터한테 승리 시 호출
     public void secondWin() {
-        System.out.println("[플레이어가 승리하였습니다!!]");
+        System.out.println("★★★★★플레이어가 승리하였습니다!!★★★★★");
         System.out.print("[몬스터를 잡으시겠습니까? yes(1) or no(2) 선택] : ");
         int no = sc.nextInt();
 
         if (no == 1) {
             save.addMonsters(second.getName()); // 저장 선택 시 SaveMonsters 클래스에 저장
-            System.out.println(second.getName() + " 포획완료!!!");
+            System.out.println("[몬스터 이름 : " + second.getName() + "]" + " ▶몬스터(도감) 추가완료◀");
         } else if (no == 2) {
             System.out.println(second.getName() + "이 도망갔습니다");
         } else {
-            System.out.println("잘못된 번호를 입력하셨습니다.." + second.getName() + "이 도망갔습니다");
+            System.out.println("잘못된 번호를 입력하셨습니다.." + second.getName() + "가 도망갔습니다");
         }
 
         showMenu(); // 다른 몬스터와 대결, 저장(도감) 확인, 프로그램 종료 메뉴 호출
@@ -56,11 +56,11 @@ public class Win {
 
         if (no == 1) {
             save.addMonsters(third.getName()); // 저장 선택 시 SaveMonsters 클래스에 저장
-            System.out.println(third.getName() + " 포획완료!!!");
+            System.out.println("[몬스터 이름 : " + third.getName() + "]" + " ▶몬스터(도감) 추가완료◀");
         } else if (no == 2) {
             System.out.println(third.getName() + "이 도망갔습니다");
         } else {
-            System.out.println("잘못된 번호를 입력하셨습니다.." + third.getName() + "이 도망갔습니다");
+            System.out.println("잘못된 번호를 입력하셨습니다.." + third.getName() + "가 도망갔습니다");
         }
 
         showMenu(); // 다른 몬스터와 대결, 저장(도감) 확인, 프로그램 종료 메뉴 호출
@@ -69,9 +69,11 @@ public class Win {
 
     // 다른 몬스터와 대결, 저장(도감) 확인, 프로그램 종료 선택메뉴
     public void showMenu() {
+        System.out.println("■■■■■■■■■■■■■■■ 메뉴 선택 ■■■■■■■■■■■■■■■");
         System.out.println("[메뉴 1번] 다른 몬스터 사냥하러 가기");
         System.out.println("[메뉴 2번] 현재까지 포획한 몬스터 도감 확인");
         System.out.println("[메뉴 0번] 프로그램 종료");
+        System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■");
         System.out.print("[메뉴 번호를 선택해주세요] : ");
         int no2 = sc.nextInt();
 
@@ -101,9 +103,9 @@ public class Win {
             at.attack(); // 대결상대 선택
         } else {
             // 몬스터(도감) 확인
-            System.out.println("===========몬스터 도감============");
+            System.out.println("▩▩▩▩▩▩▩ [몬스터 도감] ▩▩▩▩▩▩▩");
             System.out.println(save.getSave());
-            System.out.println("================================");
+            System.out.println("▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩");
         }
     }
 

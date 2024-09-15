@@ -16,7 +16,7 @@ public class Fight {
         int playerHP = 10;
 
         while (playerHP > 0 && monster1.getHp() > 0) {
-            System.out.println("================야생의 " + monster1.getName() + "===============");
+            System.out.println("================야생의 " + monster1.getName() + "================");
             System.out.println(monster1.getName() + " 가위바위보 대결 ");
             System.out.println("===========================================");
 
@@ -46,7 +46,7 @@ public class Fight {
             System.out.println("===========================================");
 
             // 승패 결정
-            System.out.println("============플레이어 vs " + monster1.getName() + "==============");
+            System.out.println("============플레이어 vs " + monster1.getName() + "===============");
             if (playerAttack == monsterRandomAttackDamage) {
                 System.out.println("비겼습니다...");
             } else if (playerAttack == 1 && monsterRandomAttackDamage == 2) {
@@ -99,7 +99,7 @@ public class Fight {
         int playerHP = 10;
 
         while (playerHP > 0 && monster1.getHp() > 0) {
-            System.out.println("================야생의 " + monster1.getName() + "===============");
+            System.out.println("================야생의 " + monster1.getName() + "================");
             System.out.println(monster1.getName() + " 가위바위보 대결 ");
             System.out.println("===========================================");
 
@@ -129,7 +129,7 @@ public class Fight {
             System.out.println("===========================================");
 
             // 승패 결정
-            System.out.println("============플레이어 vs " + monster1.getName() + "==============");
+            System.out.println("============플레이어 vs " + monster1.getName() + "===============");
             if (playerAttack == monsterRandomAttackDamage) {
                 System.out.println("비겼습니다...");
             } else if (playerAttack == 1 && monsterRandomAttackDamage == 2) {
@@ -182,7 +182,7 @@ public class Fight {
         int playerHP = 10;
 
         while (playerHP > 0 && monster1.getHp() > 0) {
-            System.out.println("================야생의 " + monster1.getName() + "===============");
+            System.out.println("================야생의 " + monster1.getName() + "================");
             System.out.println(monster1.getName() + " 가위바위보 대결 ");
             System.out.println("===========================================");
 
@@ -212,7 +212,7 @@ public class Fight {
             System.out.println("===========================================");
 
             // 승패 결정
-            System.out.println("============플레이어 vs " + monster1.getName() + "==============");
+            System.out.println("============플레이어 vs " + monster1.getName() + "===============");
             if (playerAttack == monsterRandomAttackDamage) {
                 System.out.println("비겼습니다...");
             } else if (playerAttack == 1 && monsterRandomAttackDamage == 2) {
