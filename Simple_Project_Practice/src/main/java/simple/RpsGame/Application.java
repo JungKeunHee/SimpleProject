@@ -2,6 +2,7 @@ package simple.RpsGame;
 
 import java.util.Scanner;
 
+// 게임실행
 public class Application {
 
     public static void main(String[] args) {
