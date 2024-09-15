@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Lose {
 
-    // 플리어가 패배했을 경우 호출되는 메소드
+    // 플리어가 패배했을 경우
     public static void lose() {
         Scanner sc = new Scanner(System.in);
 

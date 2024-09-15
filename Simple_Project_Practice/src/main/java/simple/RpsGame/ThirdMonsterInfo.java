@@ -1,5 +1,6 @@
 package simple.RpsGame;
 
+// 세 번째 몬스터 정보
 public class ThirdMonsterInfo {
 
     private String name;

@@ -7,7 +7,7 @@ import java.util.List;
 public class SaveMonsters {
 
     // static을 사용하여 하나의 인스턴스로 저장할 수 있게끔 설계
-    // List<String> 을 사용하여 선택한 몬스터 누적으로 저장
+    // List<String> 을 사용하여 선택한 몬스터 이름을 누적으로 저장
     private static List<String> save = new ArrayList<>();
 
     public SaveMonsters(){

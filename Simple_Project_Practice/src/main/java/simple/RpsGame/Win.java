@@ -87,6 +87,7 @@ public class Win {
                 System.exit(0);
                 break;
             default:
+                // 다른 번호 선택 시 다시 showMenu() 호출
                 System.out.println("잘못된 번호입니다. 다시 시도하세요.");
                 showMenu();
                 break;

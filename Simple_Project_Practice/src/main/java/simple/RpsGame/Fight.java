@@ -30,7 +30,7 @@ public class Fight {
             System.out.print("가위(1), 바위(2), 보(3) 중 한 가지 (숫자)선택 : ");
             int playerAttack = sc.nextInt();
 
-            // 유효성 검사 추가
+            // 유효성 검사 추가(메뉴 번호 외에 다른 번호 눌렀을 시)
             if (playerAttack < 1 || playerAttack > 3) {
                 System.out.println("잘못된 입력입니다. 다시 시도하세요.");
                 continue; // 잘못된 입력 시 다음 루프로 넘어감
@@ -113,7 +113,7 @@ public class Fight {
             System.out.print("가위(1), 바위(2), 보(3) 중 한 가지 (숫자)선택 : ");
             int playerAttack = sc.nextInt();
 
-            // 유효성 검사 추가
+            // 유효성 검사 추가(메뉴 번호 외에 다른 번호 눌렀을 시)
             if (playerAttack < 1 || playerAttack > 3) {
                 System.out.println("잘못된 입력입니다. 다시 시도하세요.");
                 continue; // 잘못된 입력 시 다음 루프로 넘어감
@@ -196,7 +196,7 @@ public class Fight {
             System.out.print("가위(1), 바위(2), 보(3) 중 한 가지 (숫자)선택 : ");
             int playerAttack = sc.nextInt();
 
-            // 유효성 검사 추가
+            // 유효성 검사 추가(메뉴 번호 외에 다른 번호 눌렀을 시)
             if (playerAttack < 1 || playerAttack > 3) {
                 System.out.println("잘못된 입력입니다. 다시 시도하세요.");
                 continue; // 잘못된 입력 시 다음 루프로 넘어감

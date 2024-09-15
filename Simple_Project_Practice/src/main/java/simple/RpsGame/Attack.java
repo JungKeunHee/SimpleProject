@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Attack {
 
-    // 대결 상대 선택할 수 있는 메소드
+    // 대결 상대 선택 메뉴
     public void attack() {
         Scanner sc = new Scanner(System.in);
 
