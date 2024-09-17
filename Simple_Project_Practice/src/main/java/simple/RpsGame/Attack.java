@@ -7,9 +7,12 @@ public class Attack {
     // 대결 상대 선택 메뉴
     public void attack() {
         Scanner sc = new Scanner(System.in);
+        FirstMonsterInfo first = new FirstMonsterInfo();
+        SecondMonsterInfo second = new SecondMonsterInfo();
+        ThirdMonsterInfo third = new ThirdMonsterInfo();
 
         System.out.println("==============사냥할 몬스터 선택==============");
-        System.out.println("[1번] 고라파덕     [2번] 잠만보     [3번] 피카츄");
+        System.out.println("[1번] " + first.getName() + "    [2번] "  + second.getName()  + "    [3번] " + third.getName());
         System.out.println("===========================================");
         System.out.print("사냥할 몬스터 번호를 입력하세요 : ");
         int no = sc.nextInt();

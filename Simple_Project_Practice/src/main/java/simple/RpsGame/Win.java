@@ -69,7 +69,7 @@ public class Win {
 
     // 다른 몬스터와 대결, 저장(도감) 확인, 프로그램 종료 선택메뉴
     public void showMenu() {
-        System.out.println("■■■■■■■■■■■■■■■ 메뉴 선택 ■■■■■■■■■■■■■■■");
+        System.out.println("■■■■■■■■■■■■■■■ 메뉴 선택 ■■■■■■■■■■■■■■");
         System.out.println("[메뉴 1번] 다른 몬스터 사냥하러 가기");
         System.out.println("[메뉴 2번] 현재까지 포획한 몬스터 도감 확인");
         System.out.println("[메뉴 0번] 프로그램 종료");

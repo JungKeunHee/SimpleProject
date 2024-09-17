@@ -245,7 +245,7 @@ public class Fight {
 
             // 게임 종료 조건 체크
             if (monster1.getHp() <= 0) {
-                win.thirdWin(); // 플레이어 승리 시 두 번째 몬스터 저장할 수 있는 메뉴 호출
+                win.thirdWin(); // 플레이어 승리 시 세 번째 몬스터 저장할 수 있는 메뉴 호출
                 break;
             } else if (playerHP <= 0) {
                 lose.lose();    // 몬스터 승리 시 재도전 할 수 있는 메뉴 호출

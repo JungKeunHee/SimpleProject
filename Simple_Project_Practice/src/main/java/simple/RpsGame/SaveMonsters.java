@@ -23,7 +23,7 @@ public class SaveMonsters {
         save.add(value);
     }
 
-    // isEmptu 사용하여 현재 save 변수에
+    // isEmpty 사용하여 현재 save 변수에
     // 값이 없다면 true 있다면 false로 확인하여 값 여부 판단 설계
     // 값이 있다면 save에 저장된 몬스터들 호출
     public boolean isEmpty (){
