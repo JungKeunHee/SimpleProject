@@ -50,7 +50,7 @@ public class Win {
     // 플레이어가 세 번째 몬스터한테 승리 시 호출
     public void thirdWin() {
 
-        System.out.println("[플레이어가 승리하였습니다!!]");
+        System.out.println("★★★★★플레이어가 승리하였습니다!!★★★★★");
         System.out.print("[몬스터를 잡으시겠습니까? yes(1) or no(2) 선택] : ");
         int no = sc.nextInt();
 
