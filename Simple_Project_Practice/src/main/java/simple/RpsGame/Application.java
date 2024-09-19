@@ -8,7 +8,7 @@ public class Application {
     public static void main(String[] args) {
 
         /* title. 몬스터 가위바위보 게임 */
-        /* comment. 가위바위보를 통해 승리하면 몬스터에게 데미지를 줘서 승리하는 게임 */
+        /* comment. 가위바위보를 통해 몬스터에게 데미지를 줘서 승리하는 게임 */
 
         Scanner sc = new Scanner(System.in);
         Attack at = new Attack();
