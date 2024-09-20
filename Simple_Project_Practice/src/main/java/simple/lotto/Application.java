@@ -1,6 +1,8 @@
 package simple.lotto;
 
 import java.util.HashSet;
+import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Application {
 
@@ -8,22 +10,37 @@ public class Application {
 
         /* title. 간단한 로또 프로그램 */
 
-        // 중복을 허용하지 않는 제네릭 컬렉션 HashSet
-        HashSet<Integer> lotto = new HashSet<>();
+        Scanner sc = new Scanner(System.in);
+        AutoLottoNumber autoLottoNum = new AutoLottoNumber();
+        ManualLottoNumber manualLottoNum = new ManualLottoNumber();
 
-        // 범위만큼 사이즈를 설정
-        while(lotto.size() < 6){
+        while (true) {
+            System.out.println("============로또 구매 및 당첨 확인============");
+            System.out.println("[메뉴 1번] 자동으로 구매하기");
+            System.out.println("[메뉴 2번] 수동으로 구매하기");
+            System.out.println("[메뉴 3번] 이 번주 당첨번호 및 당첨내역 확인");
+            System.out.println("[메뉴 0번] 프로그램 종료하기");
+            System.out.println("===========================================");
+            System.out.print("원하시는 메뉴번호를 입력해주세요 : ");
+            int selectNum = sc.nextInt();
 
-            // Math.random 을 이용해서 난수 출력, Math는 실수이기 때문에 정수로 출력해야 하므로 (int) 자료형태 변환
-            // 정수형으로 변환된 난수를 randomNum 변수에 저장
-            int randomNum = (int)(Math.random() * 45) + 1;
-
-            // lotto.add(난수 저장된 변수명)을 사용하여 사이즈 만큼 저장
-            lotto.add(randomNum);
+            switch (selectNum){
+                case 1:
+                    autoLottoNum.setAutoLottoNum();
+                    break;
+                case 2:
+                    manualLottoNum.setManualLottoNum();
+                    break;
+                case 3:
+                    break;
+                case 0:
+                    System.out.println("프로그램을 종료합니다...");
+                    return;
+                default:
+                    System.out.println("메뉴에 맞는 번호를 입력해주세요...");
+                    break;
+            }
         }
-
-        // 저장된 난수 출력
-        System.out.println(lotto);
 
     }
 }

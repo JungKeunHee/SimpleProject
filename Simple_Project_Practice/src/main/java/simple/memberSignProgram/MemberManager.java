@@ -67,8 +67,6 @@ public class MemberManager {
     // 회원목록 조회를 위한 searchMembers 메소드 설정
     public void searchMembers(){
 
-        boolean message = false;
-
         // 만약 save에 저장된 값이 없다면 true를 반환하여 등록된 회원이 없다고 안내문구 출력
         if (save.isEmpty()){
             System.out.println("현재 등록된 회원이 없습니다. 회원등록을 먼저 해주세요");
