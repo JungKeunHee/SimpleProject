@@ -18,6 +18,8 @@ public class WinningLottoNumber {
         System.out.println(winningLottoNumber);
         System.out.println("★★★★★★★★★★★★★★★★★★★★★");
 
+        System.out.println();
+
 
     }
 
