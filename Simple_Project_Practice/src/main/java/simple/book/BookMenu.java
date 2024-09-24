@@ -18,7 +18,7 @@ public class BookMenu {
 
 
         while(true) {
-            System.out.println("도서관리 프로그램 메인메뉴");
+            System.out.println("★★★★★★★★★★도서관리 프로그램 메인메뉴★★★★★★★★★★");
             System.out.println("[매뉴 1번] : 도서 추가");
             System.out.println("[메뉴 2번] : 보관된 책 중 선택하여 삭제");
             System.out.println("[메뉴 3번] : 찾을 도서 제목");
@@ -49,7 +49,7 @@ public class BookMenu {
                     break;
                 case 5:
                     int sortedBookList = selectSortedBook();
-                    bookManager.selectBookDTOList(sortedBookList);
+                    bookManager.sortedBookList(sortedBookList);
                 case 0:
                     System.out.println("프로그램을 종료합니다...");
                     return;

@@ -6,9 +6,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class BookManager {
+public class BookManager  {
 
-    List<BookDTO> bookDTOList = new ArrayList<>();
+    public static List<BookDTO> bookDTOList = new ArrayList<>();
+
 
     public BookManager() {
 
@@ -18,7 +19,8 @@ public class BookManager {
 
         bookDTOList.add(bookDTO);
 
-        System.out.println("도서 제목 : " + bookDTO.getTitle() + " 목록에 추가 되었습니다...");
+        System.out.println("도서 제목 : " + bookDTO.getTitle());
+        System.out.println("도서 목록에 추가(저장) 되었습니다...");
 
     }
 
@@ -77,41 +79,45 @@ public class BookManager {
 
     }
 
-    public void selectBookDTOList(int sortedBookList) {
+    public void sortedBookList(int sortedBookDTOList) {
 
-        if (sortedBookList == 1) {
+            System.out.println("============[정렬 전] 도서 목록============");
+            displayAll();
+
+            printBookList(sortedBookDTOList);
+
+        }
+
+
+    public void printBookList(int selectNo){
+        BookMenu bookMenu = new BookMenu();
+
+        if (selectNo == 1){
             Collections.sort(bookDTOList, new Comparator<BookDTO>() {
                 @Override
                 public int compare(BookDTO o1, BookDTO o2) {
                     return o1.getTitle().compareTo(o2.getTitle());
                 }
             });
-
-            System.out.println("============[정렬 전] 목록============");
-            displayAll();
-
-            System.out.println("============[오름차순 후] 목록============");
-            for (BookDTO book : bookDTOList) {
-                System.out.println(book);
-
-            }
-        } else if (sortedBookList == 2) {
+            System.out.println("================[도서 제목 기준 오름차순 정렬================");
+                for (BookDTO bookList : bookDTOList){
+                    System.out.println(bookList);
+                }
+        } else if (selectNo == 2){
             Collections.sort(bookDTOList, new Comparator<BookDTO>() {
                 @Override
                 public int compare(BookDTO o1, BookDTO o2) {
                     return o2.getTitle().compareTo(o1.getTitle());
                 }
             });
-
-            System.out.println("============[정렬 전] 목록============");
-            displayAll();
-
-
-            System.out.println("============[내림차순 후] 목록============");
-            for (BookDTO book : bookDTOList) {
-                System.out.println(book);
-
+            System.out.println("================[도서 제목 기준 내림차순 정렬================");
+            for (BookDTO bookList : bookDTOList){
+                System.out.println(bookList);
             }
         }
+
+        bookMenu.mainMenu();
     }
 }
+
+
