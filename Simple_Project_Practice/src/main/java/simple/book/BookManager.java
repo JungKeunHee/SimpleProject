@@ -1,6 +1,5 @@
 package simple.book;
 
-import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,13 +7,15 @@ import java.util.List;
 
 public class BookManager  {
 
+    // 입력한 도서 정보 ArrayList 로 저장
     public static List<BookDTO> bookDTOList = new ArrayList<>();
 
-
+    // 기본 생성자
     public BookManager() {
 
     }
 
+    // 도서 목록 추가
     public void addBook(BookDTO bookDTO) {
 
         bookDTOList.add(bookDTO);
@@ -24,6 +25,7 @@ public class BookManager  {
 
     }
 
+    // 도서 삭제
     public void deleteBook(int index) {
 
         System.out.println("=========[삭제 전] 저장된 도서 목록=========");
