@@ -52,7 +52,7 @@ public class BookMenu {
                     bookManager.sortedBookList(sortedBookList);
                 case 0:
                     System.out.println("프로그램을 종료합니다...");
-                    return;
+                    System.exit(0);
                 default:
                     System.out.println("메뉴에 맞는 번호를 입력해주세요...");
                     break;
