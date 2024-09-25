@@ -31,6 +31,7 @@ public class BookManager  {
 
         BookMenu bookMenu = new BookMenu();
 
+        //BooDTO 클래스(자료형)에 변수선언 후 빈공간 할당(초기화)
         BookDTO bookToDelete = null;
 
         for (BookDTO bookDTO : bookDTOList){
