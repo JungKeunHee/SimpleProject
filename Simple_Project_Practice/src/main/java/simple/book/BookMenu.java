@@ -35,8 +35,8 @@ public class BookMenu {
                    break;
 
                 case 2:
-                    int index = inputBookNo();
-                    bookManager.deleteBook(index);
+                    int deleteBookNo = inputBookNo();
+                    bookManager.deleteBook(deleteBookNo);
                     break;
                 case 3:
                     sc.nextLine();
@@ -87,10 +87,16 @@ public class BookMenu {
 
     public int inputBookNo () {
 
-        System.out.print("삭제할 도서 번호(인덱스 번호) 입력 : ");
-        int index = sc.nextInt();
+        System.out.println("===============[현재 저장된 도서목록===============");
+        bookManager.displayAll();
+        System.out.println("================================================");
 
-        return index;
+        System.out.println();
+
+        System.out.print("삭제할 도서 번호 입력 : ");
+        int bookNo = sc.nextInt();
+
+        return bookNo;
     }
 
     public String inputBookTitle () {

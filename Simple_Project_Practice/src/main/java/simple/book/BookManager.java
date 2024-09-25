@@ -10,6 +10,7 @@ public class BookManager  {
     // 입력한 도서 정보 ArrayList 로 저장
     public static List<BookDTO> bookDTOList = new ArrayList<>();
 
+
     // 기본 생성자
     public BookManager() {
 
@@ -26,27 +27,36 @@ public class BookManager  {
     }
 
     // 도서 삭제
-    public void deleteBook(int index) {
+    public void deleteBook(int deleteBookNo) {
 
-        System.out.println("=========[삭제 전] 저장된 도서 목록=========");
+        BookMenu bookMenu = new BookMenu();
 
-        displayAll();
+        BookDTO bookToDelete = null;
 
-        System.out.println("========================================");
-        System.out.println();
+        for (BookDTO bookDTO : bookDTOList){
+            if(bookDTO.getbNo() == deleteBookNo){
+                bookToDelete = bookDTO;
+                break;
+            }
+        }
 
-        bookDTOList.remove(index);
+        if (bookToDelete != null){
+            bookDTOList.remove(bookToDelete);
 
-        System.out.println("삭제 요청한 인덱스 번호는 : " + index + " 입니다.");
-        System.out.println();
+            System.out.println("요청하신 도서번호가 확인되었습니다...");
+            System.out.println("해당 도서 목록을 삭제합니다...\n");
 
-        System.out.println("=========[삭제 후] 저장된 도서 목록=========");
+            System.out.println("=============삭제 후 도서 목록============");
+            displayAll();
+            System.out.println("=======================================");
 
-        displayAll();
+        } else {
 
-        System.out.println("========================================");
+            System.out.println("요청하신 도서 번호가 확인되지 않습니다...");
+            System.out.println("도서 번호를 다시 확인해주세요... 메인메뉴로 돌아갑니다...\n");
+        }
 
-        System.out.println();
+        bookMenu.mainMenu();
 
     }
 
@@ -101,7 +111,7 @@ public class BookManager  {
                     return o1.getTitle().compareTo(o2.getTitle());
                 }
             });
-            System.out.println("================[도서 제목 기준 오름차순 정렬================");
+            System.out.println("================[도서 제목 기준 오름차순 정렬]================");
                 for (BookDTO bookList : bookDTOList){
                     System.out.println(bookList);
                 }
@@ -112,7 +122,7 @@ public class BookManager  {
                     return o2.getTitle().compareTo(o1.getTitle());
                 }
             });
-            System.out.println("================[도서 제목 기준 내림차순 정렬================");
+            System.out.println("================[도서 제목 기준 내림차순 정렬]================");
             for (BookDTO bookList : bookDTOList){
                 System.out.println(bookList);
             }
